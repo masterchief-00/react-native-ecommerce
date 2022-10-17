@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { Button } from "native-base";
 
@@ -13,7 +12,8 @@ export default function CustomButton({ mt, bg, color, children, onPress }) {
       _text={{
         color: color,
         fontWeight: "bold",
-        fontSize:18
+        fontSize: 18,
+        textAlign: "center",
       }}
       onPress={onPress}
     >

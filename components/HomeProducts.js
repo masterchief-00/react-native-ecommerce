@@ -15,7 +15,7 @@ export default function HomeProducts() {
       >
         {products.map((product) => (
           <Pressable
-            key={product.id}
+            key={product._id}
             w="47%"
             bg="white"
             rounded="md"

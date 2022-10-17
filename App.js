@@ -1,10 +1,10 @@
 import { NativeBaseProvider } from "native-base";
-import HomeScreen from "./screens/HomeScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <HomeScreen />
+      <ProfileScreen />
     </NativeBaseProvider>
   );
 }
