@@ -1,10 +1,10 @@
 import { NativeBaseProvider } from "native-base";
-import ProfileScreen from "./screens/ProfileScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <ProfileScreen />
+      <PlaceOrderScreen />
     </NativeBaseProvider>
   );
 }
