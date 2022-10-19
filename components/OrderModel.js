@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { Center, HStack, Modal, VStack, Text, Button } from "native-base";
+import {
+  Center,
+  HStack,
+  Modal,
+  VStack,
+  Text,
+  Button,
+  Pressable,
+  Image,
+} from "native-base";
 import CustomButton from "../components/CustomButton";
 
-export default function PlaceOrderModel() {
+export default function OrderModel() {
   const [showModel, setShowModel] = useState(false);
   const orderInfos = [
     {
@@ -30,8 +39,8 @@ export default function PlaceOrderModel() {
     <Center>
       <CustomButton
         onPress={() => setShowModel(true)}
-        bg="black"
-        children="SHOW TOTAL"
+        bg="#009580"
+        children="SHOW PAYMENT & TOTAL"
         color="white"
         mt={5}
       />
@@ -56,15 +65,34 @@ export default function PlaceOrderModel() {
             </VStack>
           </Modal.Body>
           <Modal.Footer>
+            <Pressable
+              w="full"
+              justifyContent="center"
+              bg="#ffa13e"
+              h={45}
+              rounded={4}
+              onPress={() => setShowModel(false)}
+            >
+              <Image
+                source={require("../assets/PayPal.png")}
+                alt="paypal"
+                resizeMode="contain"
+                w="full"
+                h={39}
+              />
+            </Pressable>
             <Button
               flex={1}
-              bg="#009580"
+              bg="black"
               h={45}
+              mt={3}
               _text={{
                 color: "white",
               }}
               onPress={() => setShowModel(false)}
-            >PLACE AN ORDER</Button>
+            >
+              PLACE AN ORDER
+            </Button>
           </Modal.Footer>
         </Modal.Content>
       </Modal>

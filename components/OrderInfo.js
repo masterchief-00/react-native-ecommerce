@@ -34,14 +34,14 @@ export default function OrderInfo(
         {text}
       </Text>
       {success && (
-        <Center py={2} mt={2} rounded={5} w="full" bg="#00b8ff">
+        <Center py={2} mt={2} rounded={5} w="full" bg="#00719c">
           <Text fontSize={12} color="white">
             Paid on Jan 12 2019
           </Text>
         </Center>
       )}
       {danger && (
-        <Center py={2} mt={2} rounded={5} w="full" bg="#f8e0e0">
+        <Center py={2} mt={2} rounded={5} w="full" bg="#cc0000">
           <Text fontSize={12} color="white">
             Not delivered
           </Text>
