@@ -15,7 +15,7 @@ export default function CartEmpty() {
         </Text>
       </Center>
 
-      <Center>
+      <Center marginBottom={-10}>
         <CustomButton bg="black" color="white" children="START SHOPPING" />
       </Center>
     </Box>

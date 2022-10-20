@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { MaterialIcons, AntDesign,FontAwesome5 } from "@expo/vector-icons";
+import { MaterialIcons, AntDesign, FontAwesome5 } from "@expo/vector-icons";
 import { Box, Image, Button, VStack, Input, Pressable } from "native-base";
 
 import React from "react";
 
-export default function RegisterScreen() {
+export default function RegisterScreen({ navigation }) {
   return (
     <Box flex={1} bg="white">
       <StatusBar backgroundColor="transparent" style="light" />
@@ -84,10 +84,10 @@ export default function RegisterScreen() {
             type="password"
           />
         </VStack>
-        <Button my={30} w={40} rounded={50} bg="black">
+        <Button my={30} w={40} rounded={50} bg="black" onPress={()=>navigation.navigate('BottomNav')}>
           Sign up
         </Button>
-        <Pressable mt={4}>
+        <Pressable mt={4} onPress={()=>navigation.navigate('Login')}>
           <Text style={{ color: "green" }}>Login</Text>
         </Pressable>
       </View>

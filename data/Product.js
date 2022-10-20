@@ -39,7 +39,7 @@ export const products = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, optio sapiente. Magnam impedit consequuntur, quas iste, eius reiciendis, beatae cumque rerum at ipsum nobis! Laborum non voluptates eaque debitis obcaecati",
     price: 180,
-    countInStock: 3,
+    countInStock: 12,
     rating: 3.5,
     numReviews: 40,
   },

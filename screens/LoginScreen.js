@@ -5,7 +5,7 @@ import { MaterialIcons, AntDesign } from "@expo/vector-icons";
 
 import { Box, Image, Button, VStack, Input, Pressable } from "native-base";
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   return (
     <Box flex={1} bg="white">
       <StatusBar backgroundColor="transparent" style="light" />
@@ -70,10 +70,10 @@ export default function LoginScreen() {
             type="password"
           />
         </VStack>
-        <Button my={30} w={40} rounded={50} bg="black">
+        <Button my={30} w={40} rounded={50} bg="black" onPress={()=>navigation.navigate('BottomNav')}>
           Login
         </Button>
-        <Pressable mt={4}>
+        <Pressable mt={4} onPress={()=>navigation.navigate('Register')}>
           <Text style={{color:'green'}}>Sign up</Text>
         </Pressable>
       </View>

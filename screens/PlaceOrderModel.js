@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Center, HStack, Modal, VStack, Text, Button } from "native-base";
 import CustomButton from "../components/CustomButton";
+import { useNavigation } from "@react-navigation/native";
 
 export default function PlaceOrderModel() {
   const [showModel, setShowModel] = useState(false);
+  const navigation = useNavigation();
   const orderInfos = [
     {
       title: "Products",
@@ -63,8 +65,13 @@ export default function PlaceOrderModel() {
               _text={{
                 color: "white",
               }}
-              onPress={() => setShowModel(false)}
-            >PLACE AN ORDER</Button>
+              onPress={() => {
+                setShowModel(false);
+                navigation.navigate("Order");
+              }}
+            >
+              PLACE AN ORDER
+            </Button>
           </Modal.Footer>
         </Modal.Content>
       </Modal>

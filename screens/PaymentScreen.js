@@ -14,6 +14,7 @@ import {
 import { StatusBar } from "expo-status-bar";
 import CustomButton from "../components/CustomButton";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const paymentMethods = [
   {
@@ -39,6 +40,7 @@ const paymentMethods = [
 ];
 
 export default function PaymentScreen() {
+  const navigation=useNavigation()
   return (
     <Box flex={1} safeAreaTop bg="#009580" py={5}>
       <StatusBar backgroundColor="transparent" style="light" />
@@ -79,6 +81,7 @@ export default function PaymentScreen() {
             ))}
 
             <CustomButton
+            onPress={()=>navigation.navigate('Placeorder')}
               children="CONTINUE"
               color="white"
               bg="#009580"

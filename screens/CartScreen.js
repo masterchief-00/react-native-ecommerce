@@ -4,8 +4,10 @@ import { StatusBar } from "expo-status-bar";
 import CartEmpty from "../components/CartEmpty";
 import CartItems from "../components/CartItems";
 import CustomButton from "../components/CustomButton";
+import { useNavigation } from "@react-navigation/native";
 
 export default function CartScreen() {
+  const navigation=useNavigation()
   return (
     <Box safeArea flex={1} bg="#e5f2e5">
       <StatusBar backgroundColor="transparent" style="dark" />
@@ -48,7 +50,7 @@ export default function CartScreen() {
           </HStack>
         </Center>
         <Center mb={10} px={5}>
-          <CustomButton bg="black" color="white" children="CHECKOUT" mt={6} />
+          <CustomButton onPress={()=>navigation.navigate('Shipping')} bg="black" color="white" children="CHECKOUT" mt={6} />
         </Center>
       </ScrollView>
     </Box>

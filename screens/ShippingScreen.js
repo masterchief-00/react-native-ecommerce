@@ -10,6 +10,7 @@ import {
 } from "native-base";
 import { StatusBar } from "expo-status-bar";
 import CustomButton from "../components/CustomButton";
+import { useNavigation } from "@react-navigation/native";
 
 const shippingInputs = [
   {
@@ -30,6 +31,7 @@ const shippingInputs = [
   },
 ];
 export default function ShippingScreen() {
+  const navigation=useNavigation()
   return (
     <Box flex={1} safeAreaTop bg="#009580" py={5}>
       <StatusBar backgroundColor="transparent" style="light" />
@@ -65,7 +67,7 @@ export default function ShippingScreen() {
                 />
               </FormControl>
             ))}
-            <CustomButton children="CONTINUE" color="white" bg="#009580" mt={10} />
+            <CustomButton onPress={()=>navigation.navigate('Checkout')} children="CONTINUE" color="white" bg="#009580" mt={10} />
           </VStack>
         </ScrollView>
       </Box>

@@ -10,9 +10,11 @@ import {
   Image,
 } from "native-base";
 import CustomButton from "../components/CustomButton";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 
 export default function OrderModel() {
   const [showModel, setShowModel] = useState(false);
+  const navigation = useNavigation();
   const orderInfos = [
     {
       title: "Products",
@@ -89,9 +91,12 @@ export default function OrderModel() {
               _text={{
                 color: "white",
               }}
-              onPress={() => setShowModel(false)}
+              onPress={() => {
+                setShowModel(false);
+                navigation.navigate('BottomNav')
+              }}
             >
-              PLACE AN ORDER
+              PAY LATER
             </Button>
           </Modal.Footer>
         </Modal.Content>

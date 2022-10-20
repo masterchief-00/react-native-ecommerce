@@ -1,9 +1,9 @@
-import { MaterialIcons, AntDesign } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import React from "react";
-import { HStack } from "native-base";
+import { HStack, Text } from "native-base";
 
-export default function Rating({ value }) {
+export default function Rating({ value, reviews, showReviews }) {
   return (
     <HStack opacity={0.6} space={0.4} mt={1} alignItems="center">
       <MaterialIcons
@@ -31,6 +31,11 @@ export default function Rating({ value }) {
         size={15}
         color="#e47200"
       />
+      {showReviews && (
+        <Text marginLeft={2} fontSize={12} italic>
+          {reviews} review(s){" "}
+        </Text>
+      )}
     </HStack>
   );
 }

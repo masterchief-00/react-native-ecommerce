@@ -13,9 +13,9 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        <StatusBar backgroundColor="transparent" style="light" />
+        {/* <StatusBar backgroundColor="transparent" style="light" /> */}
         <Stack.Navigator
-          initialRouteName="BottomNav"
+          initialRouteName="Login"
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Login" component={LoginScreen} />
